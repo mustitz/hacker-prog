@@ -1,0 +1,45 @@
+\pgfmathsetmacro{\ticksz}{0.4}
+\pgfmathsetmacro{\ltick}{1.5}
+\pgfmathsetmacro{\rtick}{2.1}
+\pgfmathsetmacro{\W}{3.5}
+
+\begin{tikzpicture}
+  \node at (0,{0.5*\ticksz}) {$1.95$ м};
+  \node at (0,{1.5*\ticksz}) {$1.96$ м};
+  \node at (0,{2.5*\ticksz}) {$1.97$ м};
+  \node at (0,{3.5*\ticksz}) {$1.98$ м};
+  \node at (0,{4.5*\ticksz}) {$1.99$ м};
+  \node at (0,{5.5*\ticksz}) {$2.00$ м};
+  \node at (0,{6.5*\ticksz}) {$2.01$ м};
+  \node at (0,{7.5*\ticksz}) {$2.02$ м};
+  \node at (0,{8.5*\ticksz}) {$2.03$ м};
+  \node at (0,{9.5*\ticksz}) {$2.04$ м};
+
+  \draw [dashed] (0.7,{0.5*\ticksz}) to ({\W},{0.5*\ticksz});
+  \draw [dashed] (0.7,{1.5*\ticksz}) to ({\W},{1.5*\ticksz});
+  \draw [dashed] (0.7,{2.5*\ticksz}) to ({\W},{2.5*\ticksz});
+  \draw [dashed] (0.7,{3.5*\ticksz}) to ({\W},{3.5*\ticksz});
+  \draw [dashed] (0.7,{4.5*\ticksz}) to ({\W},{4.5*\ticksz});
+  \draw          (0.7,{5.5*\ticksz}) to ({\W},{5.5*\ticksz});
+  \draw [dashed] (0.7,{6.5*\ticksz}) to ({\W},{6.5*\ticksz});
+  \draw [dashed] (0.7,{7.5*\ticksz}) to ({\W},{7.5*\ticksz});
+  \draw [dashed] (0.7,{8.5*\ticksz}) to ({\W},{8.5*\ticksz});
+  \draw [dashed] (0.7,{9.5*\ticksz}) to ({\W},{9.5*\ticksz});
+
+  \node at ({\ltick}, -0.4) {Л};
+  \node at ({\rtick}, -0.4) {П};
+
+  \draw [ultra thick] ({\ltick},{10*\ticksz}) to ({\ltick},{3*\ticksz});
+  \draw [ultra thick] ({\rtick},{0*\ticksz}) to ({\rtick},{7*\ticksz});
+
+  \node [right] at ({1.1*\W},{0.5*\ticksz}) {\bitstr{01~~~} $1$ м};
+  \node [right] at ({1.1*\W},{1.5*\ticksz}) {\bitstr{01~~~} $1$ м};
+  \node [right] at ({1.1*\W},{2.5*\ticksz}) {\bitstr{01~~~} $1$ м};
+  \node [right] at ({1.1*\W},{3.5*\ticksz}) {\bitstr{11~~~} $3$ м  ???};
+  \node [right] at ({1.1*\W},{4.5*\ticksz}) {\bitstr{11~~~} $3$ м  ???};
+  \node [right] at ({1.1*\W},{5.5*\ticksz}) {\bitstr{11~~~} $3$ м  ???};
+  \node [right] at ({1.1*\W},{6.5*\ticksz}) {\bitstr{11~~~} $3$ м  ???};
+  \node [right] at ({1.1*\W},{7.5*\ticksz}) {\bitstr{10~~~} $2$ м};
+  \node [right] at ({1.1*\W},{8.5*\ticksz}) {\bitstr{10~~~} $2$ м};
+  \node [right] at ({1.1*\W},{9.5*\ticksz}) {\bitstr{10~~~} $2$ м};
+\end{tikzpicture}

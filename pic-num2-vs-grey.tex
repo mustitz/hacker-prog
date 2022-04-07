@@ -1,0 +1,58 @@
+\pgfmathsetmacro{\ticksz}{0.4}
+\pgfmathsetmacro{\ltick}{1.1}
+\pgfmathsetmacro{\rtick}{1.4}
+\pgfmathsetmacro{\W}{2.5}
+
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \begin{tikzpicture}
+      \draw (0.6,0) to ({\W},0);
+      \draw [dashed] (0.6,{1*\ticksz}) to ({\W},{1*\ticksz});
+      \draw [dashed] (0.6,{2*\ticksz}) to ({\W},{2*\ticksz});
+      \draw [dashed] (0.6,{3*\ticksz}) to ({\W},{3*\ticksz});
+      \draw [dashed] (0.6,{4*\ticksz}) to ({\W},{4*\ticksz});
+
+      \node at (0.1, {0*\ticksz}) {$0$ м};
+      \node at (0.1, {1*\ticksz}) {$1$ м};
+      \node at (0.1, {2*\ticksz}) {$2$ м};
+      \node at (0.1, {3*\ticksz}) {$3$ м};
+      \node at (0.1, {4*\ticksz}) {$4$ м};
+
+      \node at ({\W}, {0.5*\ticksz}) {\bitstr{00}};
+      \node at ({\W}, {1.5*\ticksz}) {\bitstr{01}};
+      \node at ({\W}, {2.5*\ticksz}) {\bitstr{10}};
+      \node at ({\W}, {3.5*\ticksz}) {\bitstr{11}};
+
+      \draw [ultra thick] ({\ltick},{2*\ticksz}) to ({\ltick},{4*\ticksz});
+      \draw [ultra thick] ({\rtick},{1*\ticksz}) to ({\rtick},{2*\ticksz});
+      \draw [ultra thick] ({\rtick},{3*\ticksz}) to ({\rtick},{4*\ticksz});
+
+  \end{tikzpicture}
+  \caption{~}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.45\textwidth}
+  \centering
+  \begin{tikzpicture}
+      \draw (0.6,0) to ({\W},0);
+      \draw [dashed] (0.6,{1*\ticksz}) to ({\W},{1*\ticksz});
+      \draw [dashed] (0.6,{2*\ticksz}) to ({\W},{2*\ticksz});
+      \draw [dashed] (0.6,{3*\ticksz}) to ({\W},{3*\ticksz});
+      \draw [dashed] (0.6,{4*\ticksz}) to ({\W},{4*\ticksz});
+
+      \node at (0.1, {0*\ticksz}) {$0$ м};
+      \node at (0.1, {1*\ticksz}) {$1$ м};
+      \node at (0.1, {2*\ticksz}) {$2$ м};
+      \node at (0.1, {3*\ticksz}) {$3$ м};
+      \node at (0.1, {4*\ticksz}) {$4$ м};
+
+      \node at ({\W}, {0.5*\ticksz}) {\bitstr{00}};
+      \node at ({\W}, {1.5*\ticksz}) {\bitstr{01}};
+      \node at ({\W}, {2.5*\ticksz}) {\bitstr{11}};
+      \node at ({\W}, {3.5*\ticksz}) {\bitstr{10}};
+
+      \draw [ultra thick] ({\ltick},{2*\ticksz}) to ({\ltick},{4*\ticksz});
+      \draw [ultra thick] ({\rtick},{1*\ticksz}) to ({\rtick},{3*\ticksz});
+  \end{tikzpicture}
+  \caption{~}
+\end{subfigure}
