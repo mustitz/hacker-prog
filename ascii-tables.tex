@@ -1,0 +1,112 @@
+\afterpage{
+
+% Spaces between rows
+% \renewcommand{\arraystretch}{1.1}
+
+\newcommand{\chw}{\widthof{\texttt{0}}}
+\newcommand{\uBullet}{\makebox[\chw]{$\bullet$}}
+\newcommand{\uSqrt}{\makebox[\chw]{$\surd$}}
+\newcommand{\uApprox}{\makebox[\chw]{$\approx$}}
+\newcommand{\uLE}{\makebox[\chw]{$\le$}}
+\newcommand{\uGE}{\makebox[\chw]{$\ge$}}
+\newcommand{\uBlackSquare}{\makebox[\chw]{$\blacksquare$}}
+\newcommand{\uDotDotDot}{\makebox[\chw]{\textrm{...}}}
+\newcommand{\uLongDash}{\makebox[\chw]{\textrm{---}}}
+\newcommand{\uPromille}{\makebox[\chw]{‰}}
+\newcommand{\uNBSP}{\makebox[\chw]{$\boxed{\hbox{\tiny NBSP}}$}}
+\newcommand{\uSHY}{\makebox[\chw]{$\boxed{\hbox{\tiny SHY}}$}}
+
+% TODO: The following hack is used to show separately two half of the integral sign
+%       with a lot of hardcoded constants. It would be like to find another solution.
+
+\newcommand{\uTopInt}{\resizebox{\chw}{\chw}{%
+    \begin{tikzpicture}[scale=0.5]
+    \clip (0,0) rectangle (1,1);
+    \draw (0,0.1) node {\Huge$\int$};
+\end{tikzpicture}}}
+
+\newcommand{\uBottomInt}{\resizebox{\chw}{\chw}{%
+    \begin{tikzpicture}[scale=0.5]
+    \clip (0,0) rectangle (1,1);
+    \draw (0.65,0.9) node {\Huge$\int$};
+\end{tikzpicture}}}
+
+
+
+\begin{table}
+\caption{ASCII коди символів.}
+\label{TableASCII}
+
+\begin{tabular}{c|c}
+~~& \texttt{~0~~1~~2~~3~~4~~5~~6~~7~~8~~9~~A~~B~~C~~D~~E~~F} \\ \hline
+\texttt{0x0.} & \texttt{~\escape 0~~~~~~~~~~~~~~~~ ~~\escape a~\escape b~\escape t~\escape n~\escape v~\escape f~\escape r~~~~~~~} \\
+\texttt{0x1.} & \texttt{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\escape e~~~~~~~~~~~~} \\
+\texttt{0x2.} & \texttt{~\char"20~~\char"21~~\char"22~~\char"23~~\char"24~~\char"25~~\char"26~~\char"27~~\char"28~~\char"29~~\char"2A~~\char"2B~~\char"2C~~\char"2D~~\char"2E~~\char"2F} \\
+\texttt{0x3.} & \texttt{~\char"30~~\char"31~~\char"32~~\char"33~~\char"34~~\char"35~~\char"36~~\char"37~~\char"38~~\char"39~~\char"3A~~\char"3B~~\char"3C~~\char"3D~~\char"3E~~\char"3F} \\
+\texttt{0x4.} & \texttt{~\char"40~~\char"41~~\char"42~~\char"43~~\char"44~~\char"45~~\char"46~~\char"47~~\char"48~~\char"49~~\char"4A~~\char"4B~~\char"4C~~\char"4D~~\char"4E~~\char"4F} \\
+\texttt{0x5.} & \texttt{~\char"50~~\char"51~~\char"52~~\char"53~~\char"54~~\char"55~~\char"56~~\char"57~~\char"58~~\char"59~~\char"5A~~\char"5B~~\char"5C~~\char"5D~~\char"5E~~\char"5F} \\
+\texttt{0x6.} & \texttt{~\char"60~~\char"61~~\char"62~~\char"63~~\char"64~~\char"65~~\char"66~~\char"67~~\char"68~~\char"69~~\char"6A~~\char"6B~~\char"6C~~\char"6D~~\char"6E~~\char"6F} \\
+\texttt{0x7.} & \texttt{~\char"70~~\char"71~~\char"72~~\char"73~~\char"74~~\char"75~~\char"76~~\char"77~~\char"78~~\char"79~~\char"7A~~\char"7B~~\char"7C~~\char"7D~~\char"7E~~~} \\
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+\caption{Таблиця кодування cp866.}
+\label{TableCp866}
+
+
+\begin{tabular}{c|c}
+~~& \texttt{~0~~1~~2~~3~~4~~5~~6~~7~~8~~9~~A~~B~~C~~D~~E~~F} \\ \hline
+\texttt{0x8.} & \texttt{~А~~Б~~В~~Г~~Д~~Е~~Ж~~З~~И~~Й~~К~~Л~~М~~Н~~О~~П} \\
+\texttt{0x9.} & \texttt{~Р~~С~~Т~~У~~Ф~~Х~~Ц~~Ч~~Ш~~Щ~~Ъ~~Ы~~Ь~~Э~~Ю~~Я} \\
+\texttt{0xA.} & \texttt{~а~~б~~в~~г~~д~~е~~ж~~з~~и~~й~~к~~л~~м~~н~~о~~п} \\
+\texttt{0xB.} & \texttt{~░~~▒~~▓~~│~~┤~~╡~~╢~~╖~~╕~~╣~~║~~╗~~╝~~╜~~╛~~┐} \\
+\texttt{0xC.} & \texttt{~└~~┴~~┬~~├~~─~~┼~~╞~~╟~~╚~~╔~~╩~~╦~~╠~~═~~╬~~╧} \\
+\texttt{0xD.} & \texttt{~╨~~╤~~╥~~╙~~╘~~╒~~╓~~╫~~╪~~┘~~┌~~█~~▄~~▌~~▐~~▀} \\
+\texttt{0xE.} & \texttt{~р~~с~~т~~у~~ф~~х~~ц~~ч~~ш~~щ~~ъ~~ы~~ь~~э~~ю~~я} \\
+\texttt{0xF.} & \texttt{~Ё~~ё~~Є~~є~~Ї~~ї~~Ў~~ў~~°~~$\uBullet$~~·~~\uSqrt~~№~~¤~~\uBlackSquare~~\uNBSP} \\
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+\caption{Таблиця кодування koi8-u.}
+\label{TableKoi8u}
+
+\begin{tabular}{c|c}
+~~& \texttt{~0~~1~~2~~3~~4~~5~~6~~7~~8~~9~~A~~B~~C~~D~~E~~F} \\ \hline
+\texttt{0x8.} & \texttt{~─~~│~~┌~~┐~~└~~┘~~├~~┤~~┬~~┴~~┼~~▀~~▄~~█~~▌~~▐} \\
+\texttt{0x9.} & \texttt{~░~~▒~~▓~~\uTopInt~~\uBlackSquare~~\uBullet~~\uSqrt~~\uApprox~~\uLE~~\uGE~~\uNBSP~~\uBottomInt~~°~~²~~·~~÷} \\
+\texttt{0xA.} & \texttt{~═~~║~~╒~~ё~~є~~╔~~і~~ї~~╗~~╘~~╙~~╚~~╛~~ґ~~╝~~╞} \\
+\texttt{0xB.} & \texttt{~╟~~╠~~╡~~Ё~~Є~~╣~~І~~Ї~~╦~~╧~~╨~~╩~~╪~~Ґ~~╬~~©} \\
+\texttt{0xC.} & \texttt{~ю~~а~~б~~ц~~д~~е~~ф~~г~~х~~и~~й~~к~~л~~м~~н~~о} \\
+\texttt{0xD.} & \texttt{~п~~я~~р~~с~~т~~у~~ж~~в~~ь~~ы~~з~~ш~~э~~щ~~ч~~ъ} \\
+\texttt{0xE.} & \texttt{~Ю~~А~~Б~~Ц~~Д~~Е~~Ф~~Г~~Х~~И~~Й~~К~~Л~~М~~Н~~О} \\
+\texttt{0xF.} & \texttt{~П~~Я~~Р~~С~~Т~~У~~Ж~~В~~Ь~~Ы~~З~~Ш~~Э~~Щ~~Ч~~Ъ} \\
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}
+\caption{Таблиця кодування win-1251.}
+\label{TableWin1251}
+
+\begin{tabular}{c|c}
+~~& \texttt{~0~~1~~2~~3~~4~~5~~6~~7~~8~~9~~A~~B~~C~~D~~E~~F} \\ \hline
+\texttt{0x8.} & \texttt{~Ђ~~Ѓ~~‚~~ѓ~~„~~\uDotDotDot~~†~~‡~~€~~\uPromille~~Љ~~‹~~Њ~~Ќ~~Ћ~~Џ} \\
+\texttt{0x9.} & \texttt{~ђ~~‘~~’~~“~~”~~•~~–~~\uLongDash~~~~~™~~љ~~›~~њ~~ќ~~ћ~~џ} \\
+\texttt{0xA.} & \texttt{~\uNBSP~~Ў~~ў~~Ј~~¤~~Ґ~~¦~~§~~Ё~~©~~Є~~«~~¬~~\uSHY~~®~~Ї} \\
+\texttt{0xB.} & \texttt{~°~~±~~І~~і~~ґ~~µ~~¶~~·~~ё~~№~~є~~»~~ј~~Ѕ~~ѕ~~ї} \\
+\texttt{0xC.} & \texttt{~А~~Б~~В~~Г~~Д~~Е~~Ж~~З~~И~~Й~~К~~Л~~М~~Н~~О~~П} \\
+\texttt{0xD.} & \texttt{~Р~~С~~Т~~У~~Ф~~Х~~Ц~~Ч~~Ш~~Щ~~Ъ~~Ы~~Ь~~Э~~Ю~~Я} \\
+\texttt{0xE.} & \texttt{~а~~б~~в~~г~~д~~е~~ж~~з~~и~~й~~к~~л~~м~~н~~о~~п} \\
+\texttt{0xF.} & \texttt{~р~~с~~т~~у~~ф~~х~~ц~~ч~~ш~~щ~~ъ~~ы~~ь~~э~~ю~~я} \\
+\end{tabular}
+\end{table}
+
+\clearpage
+}
