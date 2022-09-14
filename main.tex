@@ -77,6 +77,11 @@
 \newcommand{\trithalf}{\Yinyang}
 \newcommand{\tritone}{$\blacksquare$}
 
+\newcommand{\stdframe}[1]{{%
+   \setlength{\fboxsep}{-2\fboxrule}% the rule will be inside the box boundary
+   \fbox{\hspace{1.2pt}\strut#1\hspace{1.2pt}}% print the box, with some padding at the left and right
+  }}
+
 \newcommand{\escape}[1]{\texttt{\char"5C #1}}
 \newcommand{\textseq}[1]{\par\vbox{\texttt{~~~}#1}}
 \newcommand{\id}[1]{\texttt{#1}}
@@ -84,6 +89,9 @@
 \newcommand{\s}{\char"20}
 \newcommand{\chspace}{\chr\s}
 \newcommand{\chesc}[1]{\chr{\escape{#1}}}
+\newcommand{\file}[1]{\texttt{#1}}
+\newcommand{\cmdd}[1]{\stdframe{\texttt{#1}}}
+\newcommand{\google}[1]{\stdframe{\texttt{#1}}}
 
 \newcommand{\setunref}{\href{https://uk.wikipedia.org/wiki/\%D0\%A1\%D0\%B5\%D1\%82\%D1\%83\%D0\%BD\%D1\%8C_(\%D0\%BA\%D0\%BE\%D0\%BC\%D0\%BF\%27\%D1\%8E\%D1\%82\%D0\%B5\%D1\%80)}{https://uk.wikipedia.org/wiki/Сетунь\_(комп'ютер)}}
 \newcommand{\quantumref}{\href{https://uk.wikipedia.org/wiki/\%D0\%9A\%D0\%B2\%D0\%B0\%D0\%BD\%D1\%82\%D0\%BE\%D0\%B2\%D0\%B8\%D0\%B9_\%D0\%BA\%D0\%BE\%D0\%BC\%D0\%BF\%27\%D1\%8E\%D1\%82\%D0\%B5\%D1\%80}{https://uk.wikipedia.org/wiki/Квантовий\_комп'ютер}}
@@ -102,6 +110,7 @@
 \maketitle
 \input{intro.tex}
 \input{ch01.tex}
+\input{ch02.tex}
 
 \printindex
 \end{document}
