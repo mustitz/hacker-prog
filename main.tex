@@ -49,6 +49,8 @@
 \date{\today}
 \makeindex
 
+\newcommand{\todo}[1]{}
+
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \NewEnviron{exercise}{\par\goodbreak\smallskip\textbf{Вправа:} \BODY \par\smallskip}
 \NewEnviron{summary}{\par\goodbreak\smallskip\textbf{Підсумки:}\begin{itemize} \BODY \end{itemize}\par\smallskip}
@@ -98,6 +100,7 @@
 \begin{document}
 
 \maketitle
+\input{intro.tex}
 \input{ch01.tex}
 
 \printindex
