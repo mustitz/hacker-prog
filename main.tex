@@ -52,8 +52,10 @@
 \newcommand{\todo}[1]{}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\NewEnviron{exercise}{\par\goodbreak\smallskip\textbf{Вправа:} \BODY \par\smallskip}
+%\NewEnviron{exercise}{\par\goodbreak\smallskip\textbf{Вправа:} \BODY \par\smallskip}
 \NewEnviron{summary}{\par\goodbreak\smallskip\textbf{Підсумки:}\begin{itemize} \BODY \end{itemize}\par\smallskip}
+
+\newenvironment{exercise}{\par\goodbreak\smallskip\textbf{Вправа:}}{\par\smallskip}
 
 \NewEnviron{algorithm}{\medskip\goodbreak \BODY \medskip\goodbreak}
 %\NewEnviron{algsteps}{\begin{enumerate}[\hspace{2\parindent}1.] \BODY \end{enumerate}}
@@ -90,6 +92,7 @@
 \newcommand{\chspace}{\chr\s}
 \newcommand{\chesc}[1]{\chr{\escape{#1}}}
 \newcommand{\file}[1]{\texttt{#1}}
+\newcommand{\term}[1]{\texttt{#1}}
 \newcommand{\cmdd}[1]{\stdframe{\texttt{#1}}}
 \newcommand{\google}[1]{\stdframe{\texttt{#1}}}
 
@@ -104,6 +107,14 @@
     \ifthenelse{\equal{#1}{utf16le}}{utf--16le}{%
     \ifthenelse{\equal{#1}{utf16be}}{utf--16be}{%
         ???}}}}
+
+\newcommand{\TODO}[1]{(TODO: \textit{#1})}
+
+\definecolor{termuser}{RGB}{0,100,0}
+\definecolor{termroot}{RGB}{255,0,0}
+\definecolor{termdir}{RGB}{0,0,255}
+\definecolor{termgitbranch}{RGB}{123,123,0}
+\definecolor{termmingw}{RGB}{202,0,202}
 
 \begin{document}
 
